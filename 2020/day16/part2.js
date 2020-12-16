@@ -54,11 +54,9 @@ for (var c=0;c<cols;c++) {
     }
   }
   fields.push([c, ks]);
-  //fields.push(keynames[0]);
 }
 
 const sorted = fields.sort(([ka,a], [kb,b]) => b.length - a.length);
-console.log(sorted);
 const resultFields = [];
 for (var [c, invalids] of sorted) {
   var rest = [...keys];
@@ -68,8 +66,6 @@ for (var [c, invalids] of sorted) {
   keys.splice(keys.indexOf(rest[0]), 1);
   resultFields[c] = rest[0];
 }
-
-console.log(resultFields);
 
 var result = 1;
 for (var i=0;i<resultFields.length;i++) {
