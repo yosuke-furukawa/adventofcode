@@ -78,5 +78,3 @@ function createRegexpInner(key) {
 const regexp = createRegexp();
 console.log(regexp);
 console.log(messages.filter((message) => regexp.test(message)).length);
-console.log(createRegexpInner(42));
-console.log(createRegexpInner(31));
